@@ -1,0 +1,39 @@
+'pt-BR':
+  activerecord:
+    models:
+      admin:
+        one: Administrador
+        other: Admistradores
+      subject:
+        one: Assunto
+        other: Assuntos
+      question:
+        one: Pergunta
+        other: Perguntas
+    attributes:
+      admin:
+        id: Código
+        email: emails
+        password: Senha
+        Password_confirmation: Confirmar senha
+        create_at: Criado em
+        update_at: Atualizado em
+      user:
+        id: Código
+        email: emails
+        password: Senha
+        Password_confirmation: Confirmar senha
+        create_at: Criado em
+        update_at: Atualizado em
+      subject:
+        id: Código
+        description: Descrição
+        create_at: Criado em
+        update_at: Atualizado em
+      question:
+        id: Código
+        description: Descrição
+        subject: Assunto
+        subject_id: Assunto
+        create_at: Criado em
+        update_at: Atualizado em  

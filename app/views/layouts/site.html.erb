@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TimeToAnswer</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application'%>
+  </head>
+
+  <body>
+  <h1>LAYOUT site </h1>
+    <%= yield %>
+    <%= link_to admins_backoffice_subjects_path do %>
+                                <i class="fa fa-file-text-o fa-fw"></i>Assutos/ Áreas
+                            <% end %>
+    <%= link_to 'Logof [Administrador]', destroy_admin_session_path, method: :delete %>
+  </body>
+</html>
