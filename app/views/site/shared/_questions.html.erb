@@ -1,0 +1,41 @@
+
+
+<% @questions.each do |question| %>
+  <%= form_with url: site_answer_path do |form|%>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        
+          <span class="label label-info", style ="margin-right: 20px;">
+            <%=link_to question.subject.description, site_search_subject_path(question.subject_id), style:"color:white"%>
+          </span>
+          <%= question.description %>
+       
+      </div>
+    
+      <div class="panel-body">
+        <ul>
+          <% question.answers.each do |answer| %>
+            <li style="list-style:none;">
+              <div class="radio">
+                <label>
+                  <%= radio_button_tag 'answer_id', answer.id %>
+                  <%= answer.description %>
+                </label>
+              </div>
+            </li>
+
+          <% end %>
+          <li style="list-style:none;">
+            <%= form.submit "Responder", class:"btn btn-default", id:"submit_#{question.id}" %>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  <%end%>
+<% end %>
+
+<div class="text-center">
+    <%= paginate @questions %>
+
+</div>
