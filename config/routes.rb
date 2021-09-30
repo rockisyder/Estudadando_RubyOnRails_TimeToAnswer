@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :site do
     get 'welcome/index'
     get 'search', to: 'search#questions'
-    get 'subject/:subject_id', to: 'search#subject', as:'search_subject'
+    get 'subject/:subject_id/:subject', to: 'search#subject', as:'search_subject'
 
     post 'answer', to: 'answer#question'
   end
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     resources :questions
   end 
 
-  devise_for :admins
+  devise_for :admins, skip: [:registrations]
   
 
   
@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  
   
  
   get 'inicio', to: 'site/welcome#index'

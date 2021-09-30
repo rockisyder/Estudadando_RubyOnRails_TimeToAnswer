@@ -1,12 +1,14 @@
-
+<div class = "jumbotron", style="width: 98%; margin: 0px auto;"">
+  <h3 style ="margin-left: 40px;"><%= msg_jumbotron%></h3>
+</div><br>
 
 <% @questions.each do |question| %>
   <%= form_with url: site_answer_path do |form|%>
-    <div class="panel panel-default">
+    <div class="panel panel-default"", style="width: 98%; margin: 0px auto;">
       <div class="panel-heading">
         
           <span class="label label-info", style ="margin-right: 20px;">
-            <%=link_to question.subject.description, site_search_subject_path(question.subject_id), style:"color:white"%>
+            <%=link_to "#{question.subject.description}(#{question.subject.questions_count})", site_search_subject_path(question.subject_id, question.subject.description), style:"color:white"%>
           </span>
           <%= question.description %>
        

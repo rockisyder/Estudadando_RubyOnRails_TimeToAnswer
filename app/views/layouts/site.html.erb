@@ -35,7 +35,7 @@
   </head>
   <body>
    
-    <div class="container">
+    <div style="width: 98%; margin: 0px auto;">
 
       <!-- Static navbar -->
       <nav class="navbar navbar-default">
@@ -51,6 +51,7 @@
             <%= link_to 'Time to Answer', root_path, class:"navbar-brand" %>
             
           </div>
+          
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav"></ul>
               <%= form_with url: site_search_path, local: true, class:"navbar-form navbar-left", method: :get do |form| %>
@@ -100,14 +101,7 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        
-        <h1>Site::Welcome#index</h1>
-        <p>Find me in app/views/site/welcome/index.html.erb</p>
-
-        </div>
-      </div>
+    </div>
     <%= yield %>
     </div> <!-- /container -->
 
